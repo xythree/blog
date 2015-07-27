@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<% for(var i = 0, len = list.length; i < len; i++) { %>
+
+<a href="/page?uid=<%= list[i]._id %>"><%= list[i].title %></a>
+
+<% } %>
+</body>
+</html>
