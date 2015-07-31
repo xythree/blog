@@ -30,6 +30,7 @@ module.exports = {
                 Model: Model
             }
         }
+
         return Model
     }
 }

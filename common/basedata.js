@@ -13,8 +13,19 @@ module.exports = {
         time: {type: Date, default: Date.now},
         title: String,
         content: String,
-        tagName: {type: Array, default: ['']},
+        tagName: {type: Array, default: []},
         like: {type: Number, default: 0},
         commentNum:{type: Number, default: 0}
+    },
+    tags: {
+        list: {type: Array, default: []}
     }
 }
+
+
+
+
+
+
+
+

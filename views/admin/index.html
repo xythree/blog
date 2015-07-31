@@ -7,6 +7,22 @@
 <body>
 
 
+<% list.forEach(function (_t, ind, arr) { %>
+
+<p><a href="/admin/edit?uid=<%= _t._id %>"><%= _t.title %></a></p>
+
+<% }) %>
+
+tags://///////////////////
+<div class="itagBox">
+
+<% tagName.forEach(function (_t, ind, arr) { %>
+
+<p><a href="javascript:;"><%= _t %></a></p>
+
+<% }) %>
+</div>
+
 </body>
 </html>
 

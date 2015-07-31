@@ -8,15 +8,14 @@
 
 </head>
 <body>
+<input id="uid" value="<%= list._id %>" type="hidden"/>
+<input type="text" id="title" value="<%= list.title %>"/><br />
 
-<input type="text" id="title"/><br />
-
-<textarea id="content" cols="30" rows="10"></textarea><br />
+<textarea id="content" cols="30" rows="10"><%= list.content %></textarea><br />
 <label>
     tags: 多个以逗号(,)隔开
-    <input type="text" id="tagName" />
-</label>
-<br />
+    <input type="text" id="tagName" value="<%= list.tagName.join(',') %>" />
+</label><br />
 <input type="submit" value="submit" id="submit" />
 
 
@@ -28,11 +27,12 @@
         var content = $('#content').val()
         var tagName = $('#tagName').val()
         var d = {
+            uid: $('#uid').val(),
             title: title,
             content: content,
             tagName: tagName
         }
-        $.post('/admin/add',d, function (data) {
+        $.post('/admin/edit',d, function (data) {
             console.log(data)
         })
 
@@ -41,7 +41,5 @@
 
 
 </script>
-
 </body>
 </html>
-

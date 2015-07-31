@@ -38,15 +38,15 @@ require('./routes/login')(app, session)
 require('./routes/home')(app, session)
 require('./routes/content')(app, session)
 
+require('./routes/admin/admin')(app, session)
 
-require('./routes/admin/index')(app, session)
-require('./routes/admin/add')(app, session)
 
 app.get('/404', function (req, res) {
     res.render('404')
 })
 
-app.listen(config.port)
 
+
+app.listen(config.port)
 
 

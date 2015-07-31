@@ -1,6 +1,9 @@
 module.exports = function (app, session) {
 
-    app.get('/home', function (req, res) {
+    app.get('/home',home)
+    app.get('/', home)
+
+    function home(req, res) {
 
         var model = global.getModel('article')
 
@@ -18,8 +21,7 @@ module.exports = function (app, session) {
         })
 
 
-    })
-
+    }
 
 
 
